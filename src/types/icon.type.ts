@@ -1,5 +1,5 @@
-import { AiOutlineShoppingCart, AiOutlineShopping } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineShopping, AiOutlineCheck } from 'react-icons/ai';
 
-export const icons = {AiOutlineShopping, AiOutlineShoppingCart};
+export const icons = { AiOutlineShopping, AiOutlineShoppingCart, AiOutlineCheck };
 
 export type TypeIcon = keyof typeof icons;

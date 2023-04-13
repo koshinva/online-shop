@@ -1,0 +1,30 @@
+.filters {
+  @apply w-1/5 p-3;
+}
+.filters__title {
+  @apply font-bold text-lg text-red-900 mb-5;
+}
+.field {
+  @apply flex items-center text-red-800;
+}
+.field:not(:last-child) {
+  @apply mb-2;
+}
+.field__real-checkbox {
+  @apply w-0 h-0 absolute opacity-0;
+}
+.field__custom-checkbox {
+  @apply flex items-center justify-center bg-transparent w-4 h-4 border border-red-300 rounded-sm mr-2 transition-colors duration-300;
+}
+.field__custom-checkbox > svg {
+  @apply text-sm scale-0 opacity-0 transition-all duration-300;
+}
+.field__real-checkbox:hover + .field__custom-checkbox {
+  @apply border-red-900;
+}
+.field__real-checkbox:checked + .field__custom-checkbox {
+  @apply border-red-900;
+}
+.field__real-checkbox:checked + .field__custom-checkbox > svg {
+  @apply scale-100 opacity-100;
+}
