@@ -4,17 +4,17 @@ import Icon from 'ui/Icon';
 
 interface IFieldFilterProps {
   brand: IBrandData;
-  handleClick: () => void;
+  handleChange: () => void;
 }
 
-const FieldFilter: FC<IFieldFilterProps> = ({ brand, handleClick }) => {
+const FieldFilter: FC<IFieldFilterProps> = ({ brand, handleChange }) => {
   return (
     <label className="field">
       <input
         className="field__real-checkbox"
         type="checkbox"
         checked={brand.checked}
-        onClick={handleClick}
+        onChange={handleChange}
         name={brand.code}
       />
       <span className="field__custom-checkbox">

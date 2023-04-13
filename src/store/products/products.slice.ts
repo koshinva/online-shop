@@ -28,5 +28,10 @@ export const productsSlice = createSlice({
         state.checkedIdBrands.push(action.payload);
       }
     },
+    filterProductsByBrands(state) {
+      state.products = state.products.filter((product) =>
+        state.checkedIdBrands.includes(product.brand)
+      );
+    },
   },
 });
