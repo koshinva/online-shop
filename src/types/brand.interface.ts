@@ -1,4 +1,4 @@
-export interface IFilterData {
+export interface IBrandData {
   id: number;
   title: string;
   sort: string;

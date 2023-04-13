@@ -1,23 +1,20 @@
-import { brands } from 'assets/brands';
-import { FC, useState } from 'react';
-import { IFilterData } from './filter.interface';
+import { FC } from 'react';
 import FieldFilter from './FieldFilter';
+import { useActions } from 'hooks/useActions';
+import { useTypedSelector } from 'hooks/useTypedSelector';
 
 const FormFilters: FC = () => {
-  const [filters, setFilters] = useState<IFilterData[]>(
-    brands.map((brand) => ({ ...brand, checked: false }))
-  );
-
-  const handleClick = (id: number) => {
-    setFilters((prev) =>
-      prev.map((filter) => (filter.id === id ? { ...filter, checked: !filter.checked } : filter))
-    );
-  };
+  const { toggleCheckedBrand } = useActions();
+  const { brands } = useTypedSelector((state) => state.products);
 
   return (
     <form className="form-filters">
-      {filters.map((filter) => (
-        <FieldFilter key={filter.id} filter={filter} handleClick={handleClick} />
+      {brands.map((brand) => (
+        <FieldFilter
+          key={brand.id}
+          brand={brand}
+          handleClick={() => toggleCheckedBrand(brand.id)}
+        />
       ))}
     </form>
   );

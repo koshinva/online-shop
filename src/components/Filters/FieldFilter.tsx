@@ -1,26 +1,26 @@
 import { FC } from 'react';
-import { IFilterData } from './filter.interface';
+import { IBrandData } from '../../types/brand.interface';
 import Icon from 'ui/Icon';
 
 interface IFieldFilterProps {
-  filter: IFilterData;
-  handleClick: (id: number) => void;
+  brand: IBrandData;
+  handleClick: () => void;
 }
 
-const FieldFilter: FC<IFieldFilterProps> = ({ filter, handleClick }) => {
+const FieldFilter: FC<IFieldFilterProps> = ({ brand, handleClick }) => {
   return (
     <label className="field">
       <input
         className="field__real-checkbox"
         type="checkbox"
-        checked={filter.checked}
-        onClick={() => handleClick(filter.id)}
-        name={filter.code}
+        checked={brand.checked}
+        onClick={handleClick}
+        name={brand.code}
       />
       <span className="field__custom-checkbox">
         <Icon name="AiOutlineCheck" />
       </span>
-      {filter.title}
+      {brand.title}
     </label>
   );
 };
