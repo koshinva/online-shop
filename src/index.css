@@ -5,5 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap');
 
 body {
+  @apply bg-sky-50;
   font-family: 'Golos Text', sans-serif;
 }

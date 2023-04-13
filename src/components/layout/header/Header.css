@@ -1,0 +1,19 @@
+.header {
+  @apply min-h-[70px] bg-sky-400 w-4/5 mx-auto p-6 rounded-b-lg;
+}
+.header__wrapper {
+  @apply flex items-center justify-between;
+}
+.logo {
+  @apply flex items-end;
+}
+.logo__title {
+  @apply text-lg opacity-90 font-semibold;
+}
+.cart__link {
+  @apply block relative opacity-70 hover:opacity-100 hover:scale-105 transition-all;
+}
+.cart__quantity {
+  @apply absolute -bottom-1/2 -right-1/2 bg-red-400 rounded-full w-5 h-5 flex items-center justify-center;
+  content: '';
+}
