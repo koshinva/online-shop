@@ -31,5 +31,8 @@ export const cartSlice = createSlice({
       cartItem.quantity = payload.type === 'minus' ? cartItem.quantity - 1 : cartItem.quantity + 1;
       cartItem.price = cartItem.product.regular_price.value * cartItem.quantity;
     },
+    calculateTotalAmount(state) {
+      state.totalAmount = state.cartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
+    },
   },
 });

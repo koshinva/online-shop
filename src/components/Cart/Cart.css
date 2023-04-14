@@ -1,8 +1,11 @@
 .cart {
   @apply p-5;
 }
+.cart__title-empty {
+  @apply text-2xl text-red-800 opacity-70 text-center mt-10;
+}
 .cart-item {
-  @apply w-3/5 mx-auto flex justify-between items-center bg-red-100 rounded-xl py-2 px-4 shadow-sm;
+  @apply flex justify-between items-center bg-red-100 rounded-xl py-2 px-4 shadow-sm;
 }
 .cart-item:not(:last-child) {
   @apply mb-3;
@@ -30,4 +33,17 @@
 }
 .cart-item__button_delete {
   @apply text-red-800;
+}
+.total-amount {
+  @apply flex items-center p-5 mt-5 relative;
+}
+.total-amount::after {
+  @apply absolute top-0 left-0 w-full h-[1px] bg-red-300 opacity-50;
+  content: '';
+}
+.total-amount__title {
+  @apply font-semibold text-lg mr-2;
+}
+.total-amount__price {
+  @apply opacity-80;
 }
