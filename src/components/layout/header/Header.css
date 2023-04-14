@@ -1,3 +1,14 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .header {
   @apply min-h-[60px] bg-sky-400 w-full px-6 py-3 fixed top-0 left-0 z-10;
 }
@@ -16,4 +27,5 @@
 .cart__quantity {
   @apply absolute -bottom-1/3 -right-1/3 bg-red-400 rounded-full w-6 h-6 flex items-center justify-center text-white;
   content: '';
+  animation: pulse 0.3s ease-in;
 }
