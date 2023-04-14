@@ -5,7 +5,7 @@ import Filters from './Filters/Filters';
 
 const Main: FC = () => {
   return (
-    <section className="h-screen flex justify-between">
+    <section className="flex justify-between">
       <Filters />
       <Products />
     </section>

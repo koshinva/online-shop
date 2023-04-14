@@ -1,0 +1,34 @@
+.products {
+  @apply w-[75%] p-3 mb-10;
+}
+.products__list {
+  @apply grid grid-cols-3 gap-5 justify-items-center;
+}
+.product-item {
+  @apply max-w-[270px] border border-red-200 rounded-md p-3;
+}
+.product-item__top-level {
+  @apply relative;
+}
+.product-item__image {
+  @apply w-full;
+}
+.product-item__button {
+  @apply absolute top-3 right-3 text-xl text-sky-800 border rounded-full p-2 border-transparent hover:border-sky-800 transition-colors duration-200;
+  content: '';
+}
+.product-item__bottom-level {
+  @apply flex justify-between items-end;
+}
+.product-item__title {
+  @apply font-medium text-red-900;
+}
+.product-item__brand {
+  @apply text-sm opacity-70;
+}
+.product-item__price {
+  @apply text-2xl font-bold;
+}
+.product-item__price > span {
+  @apply text-base opacity-70 font-normal;
+}

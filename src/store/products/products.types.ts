@@ -5,4 +5,6 @@ export interface IInitialState {
   brands: IBrandData[];
   checkedIdBrands: number[];
   products: IProductData[];
+  productsPerPage: number;
+  moreButtonActivity: boolean;
 }

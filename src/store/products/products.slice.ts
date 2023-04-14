@@ -11,6 +11,8 @@ const initialState: IInitialState = {
   brands: getBrands(),
   products: products,
   checkedIdBrands: [],
+  productsPerPage: 6,
+  moreButtonActivity: 6 < products.length,
 };
 
 export const productsSlice = createSlice({
@@ -37,6 +39,10 @@ export const productsSlice = createSlice({
       state.checkedIdBrands = [];
       state.brands = getBrands();
       state.products = products;
+    },
+    increaseProductsPerPage(state) {
+      state.productsPerPage += 3;
+      state.moreButtonActivity = state.productsPerPage < state.products.length;
     }
   },
 });
