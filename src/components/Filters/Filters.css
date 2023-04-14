@@ -4,6 +4,12 @@
 .filters__title {
   @apply font-bold text-lg text-red-900 mb-5;
 }
+.form-filters__button-reset {
+  @apply text-red-500 flex w-full justify-center items-center py-3 border border-transparent hover:border-red-500 rounded-lg transition-colors duration-300 text-sm font-medium;
+}
+.form-filters__button-reset > svg {
+  @apply text-black mr-2 text-lg;
+}
 .field {
   @apply flex items-center text-red-800;
 }

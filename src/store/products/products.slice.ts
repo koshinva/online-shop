@@ -33,5 +33,10 @@ export const productsSlice = createSlice({
         state.checkedIdBrands.includes(product.brand)
       );
     },
+    resetFiltersByBrands(state) {
+      state.checkedIdBrands = [];
+      state.brands = getBrands();
+      state.products = products;
+    }
   },
 });
