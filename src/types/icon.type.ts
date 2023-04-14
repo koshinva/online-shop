@@ -3,6 +3,9 @@ import {
   AiOutlineShopping,
   AiOutlineCheck,
   AiOutlineClose,
+  AiOutlinePlusCircle,
+  AiOutlineMinusCircle,
+  AiOutlineDelete,
 } from 'react-icons/ai';
 import { BsCartPlus, BsCartDashFill } from 'react-icons/bs';
 
@@ -11,6 +14,9 @@ export const icons = {
   AiOutlineShoppingCart,
   AiOutlineCheck,
   AiOutlineClose,
+  AiOutlinePlusCircle,
+  AiOutlineMinusCircle,
+  AiOutlineDelete,
   BsCartDashFill,
   BsCartPlus,
 };

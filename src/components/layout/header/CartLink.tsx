@@ -6,10 +6,10 @@ import Icon from 'ui/Icon';
 const CartLink: FC = () => {
   const { cartList } = useTypedSelector((state) => state.cart);
   return (
-    <div className="cart">
-      <Link className="cart__link" to="/cart">
+    <div className="cart-link">
+      <Link className="cart-link__link" to="/cart">
         <Icon className="fill-red-950 text-3xl" name="AiOutlineShoppingCart" />
-        <span className="cart__quantity" key={cartList.length}>
+        <span className="cart-link__quantity" key={cartList.length}>
           {cartList.length}
         </span>
       </Link>
