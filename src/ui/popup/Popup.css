@@ -1,0 +1,19 @@
+@keyframes popup_success {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.popup_success {
+  @apply fixed top-10 right-10 z-20 w-[400px] h-[100px] rounded-md bg-green-300 shadow-2xl flex items-center justify-center text-xl font-semibold p-10;
+  content: '';
+  animation: popup_success 0.5s ease;
+}
+.popup_success__button {
+  @apply absolute top-1 right-1 hover:opacity-60 p-2;
+  content: '';
+}

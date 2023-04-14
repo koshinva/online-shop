@@ -1,10 +1,11 @@
 import { FC } from 'react';
 
-import './Cart.css';
 import CartList from './CartList';
 import TotalAmount from './TotalAmount';
-import CartForm from './CartForm';
 import { useTypedSelector } from 'hooks/useTypedSelector';
+import CartForm from './CartForm';
+
+import './Cart.css';
 
 const Cart: FC = () => {
   const { cartList } = useTypedSelector((state) => state.cart);

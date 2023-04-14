@@ -14,7 +14,7 @@
   @apply w-[60px] inline-block mr-3;
 }
 .cart-item__title {
-  @apply inline-block font-semibold opacity-70 ;
+  @apply inline-block font-semibold opacity-70;
 }
 .cart-item__quantity {
   @apply flex items-center;
@@ -46,4 +46,16 @@
 }
 .total-amount__price {
   @apply opacity-80;
+}
+.cart-form {
+  @apply w-1/2 mx-auto mt-4;
+}
+.cart-form__title {
+  @apply mb-4 opacity-70;
+}
+.cart-form__input {
+  @apply outline-none border border-red-100 p-3 w-full placeholder:text-red-300 rounded-sm focus:border-red-400 transition-colors duration-200;
+}
+.cart-form__input:not(:last-child) {
+  @apply mb-3;
 }

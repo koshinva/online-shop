@@ -3,6 +3,7 @@ import Header from './header/Header';
 import { Outlet } from 'react-router-dom';
 
 import './Layout.css';
+import SuccessPopup from 'ui/popup/SuccessPopup';
 
 const Layout: FC = () => {
   return (
@@ -11,6 +12,7 @@ const Layout: FC = () => {
       <main className='main'>
         <Outlet />
       </main>
+      <SuccessPopup />
     </>
   );
 };

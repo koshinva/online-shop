@@ -1,9 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IAddToCart, IChangeQuantity, IInitialState } from './cart.types';
+import { sendOrder } from './cart.action';
 
 const initialState: IInitialState = {
   cartList: [],
   totalAmount: 0,
+  isOpenedPopup: false,
 };
 
 export const cartSlice = createSlice({
@@ -34,5 +36,14 @@ export const cartSlice = createSlice({
     calculateTotalAmount(state) {
       state.totalAmount = state.cartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
     },
+    closePopup(state) {
+      state.isOpenedPopup = false;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(sendOrder.fulfilled, (state) => {
+      state.isOpenedPopup = true;
+      state.cartList = [];
+    });
   },
 });
