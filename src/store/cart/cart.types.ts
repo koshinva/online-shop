@@ -9,3 +9,7 @@ export interface IAddToCart {
   product: IProductData;
   quantity?: number;
 }
+export interface IChangeQuantity {
+  productId: number;
+  type: 'minus' | 'plus';
+}
