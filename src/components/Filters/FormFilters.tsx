@@ -26,7 +26,7 @@ const FormFilters: FC = () => {
           handleChange={() => toggleCheckedBrand(brand.id)}
         />
       ))}
-      <Button type="submit" className="mt-7 mb-4">
+      <Button type="submit" className="mt-4 mb-2 md:mt-7 md:mb-4">
         Применить
       </Button>
       <button

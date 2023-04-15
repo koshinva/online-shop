@@ -1,5 +1,5 @@
 .button {
-  @apply w-full py-4 px-5  text-sm rounded-xl duration-300;
+  @apply w-full p-3 min-[1300px]:py-4 min-[1300px]:px-5 text-sm rounded-xl duration-300;
 }
 .button_fill {
   @apply bg-red-500 text-white opacity-80 hover:opacity-100 transition-opacity;

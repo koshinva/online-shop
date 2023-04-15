@@ -5,7 +5,7 @@ import Filters from './Filters/Filters';
 
 const Main: FC = () => {
   return (
-    <section className="flex justify-between">
+    <section className="flex flex-col justify-between md:flex-row">
       <Filters />
       <Products />
     </section>

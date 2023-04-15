@@ -13,13 +13,13 @@
   @apply min-h-[60px] bg-sky-400 w-full px-6 py-3 fixed top-0 left-0 z-10;
 }
 .header__wrapper {
-  @apply flex items-center justify-between w-4/5 mx-auto;
+  @apply flex items-center justify-between w-[90%] min-[1300px]:w-4/5 mx-auto;
 }
 .logo__link {
   @apply flex items-center;
 }
 .logo__title {
-  @apply text-lg font-semibold text-sky-100;
+  @apply text-base lg:text-lg font-semibold text-sky-100;
 }
 .cart-link__link {
   @apply block relative opacity-70 hover:opacity-100 hover:scale-105 transition-all;

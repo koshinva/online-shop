@@ -10,7 +10,7 @@
   @apply fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 z-20;
 }
 .popup-success__body, .popup-product__body {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] shadow-2xl p-10;
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[400px] shadow-2xl p-6 lg:p-10;
   content: '';
   animation: popup 0.5s ease;
 }
