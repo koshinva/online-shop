@@ -49,7 +49,7 @@ const CartForm: FC = () => {
         onChange={handleChange}
       />
       <Button type="submit" className="mt-4">
-        Отправить
+        Оформить заказ
       </Button>
     </form>
   );
