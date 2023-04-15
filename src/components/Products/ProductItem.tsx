@@ -3,13 +3,14 @@ import { useTypedSelector } from 'hooks/useTypedSelector';
 import { FC } from 'react';
 import { IProductData } from 'types/product.interface';
 import Icon from 'ui/Icon';
+import Button from 'ui/button/Button';
 
 interface IProductItem {
   product: IProductData;
 }
 
 const ProductItem: FC<IProductItem> = ({ product }) => {
-  const { addProductInCart, removeProductFromCart } = useActions();
+  const { addProductInCart, removeProductFromCart, selectProductInPopup } = useActions();
   const { cartList } = useTypedSelector((state) => state.cart);
 
   const isExistInCart = cartList.find((cartItem) => cartItem.product.id === product.id);
@@ -37,6 +38,13 @@ const ProductItem: FC<IProductItem> = ({ product }) => {
           {product.regular_price.value} <span>{product.regular_price.currency}</span>
         </div>
       </div>
+      <Button
+        className="mt-3"
+        typeButton="outline"
+        onClick={() => selectProductInPopup({ productId: product.id })}
+      >
+        Подробнее
+      </Button>
     </div>
   );
 };

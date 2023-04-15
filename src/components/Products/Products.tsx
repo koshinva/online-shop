@@ -3,8 +3,8 @@ import { FC } from 'react';
 import './Products.css';
 import { useTypedSelector } from 'hooks/useTypedSelector';
 import ProductItem from './ProductItem';
-import Button from 'components/ui/Button';
 import { useActions } from 'hooks/useActions';
+import Button from 'ui/button/Button';
 
 const Products: FC = () => {
   const { products, productsPerPage, moreButtonActivity } = useTypedSelector(

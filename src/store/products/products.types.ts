@@ -7,4 +7,5 @@ export interface IInitialState {
   products: IProductData[];
   productsPerPage: number;
   moreButtonActivity: boolean;
+  productInPopup: null | IProductData;
 }

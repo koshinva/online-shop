@@ -13,6 +13,7 @@ const initialState: IInitialState = {
   checkedIdBrands: [],
   productsPerPage: 6,
   moreButtonActivity: 6 < products.length,
+  productInPopup: null,
 };
 
 export const productsSlice = createSlice({
@@ -43,6 +44,12 @@ export const productsSlice = createSlice({
     increaseProductsPerPage(state) {
       state.productsPerPage += 3;
       state.moreButtonActivity = state.productsPerPage < state.products.length;
+    },
+    selectProductInPopup(state, action: PayloadAction<{productId: number}>) {
+      state.productInPopup = state.products.find(product => product.id === action.payload.productId) || null;
+    },
+    closeProductPopup(state) {
+      state.productInPopup = null;
     }
   },
 });

@@ -1,8 +1,8 @@
 import { FC, FormEvent, useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useActions } from 'hooks/useActions';
+import Button from 'ui/button/Button';
 
-import Button from 'components/ui/Button';
 
 interface IFields {
   user: string;

@@ -1,0 +1,1 @@
+export const popupRowTitles = ['title', 'sku', 'type', 'brand']

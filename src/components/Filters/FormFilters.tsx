@@ -2,8 +2,8 @@ import { FC } from 'react';
 import FieldFilter from './FieldFilter';
 import { useActions } from 'hooks/useActions';
 import { useTypedSelector } from 'hooks/useTypedSelector';
-import Button from 'components/ui/Button';
 import Icon from 'ui/Icon';
+import Button from 'ui/button/Button';
 
 const FormFilters: FC = () => {
   const { toggleCheckedBrand, filterProductsByBrands, resetFiltersByBrands } = useActions();
