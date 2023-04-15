@@ -30,7 +30,7 @@ const PopupProduct: FC = () => {
       <div className="popup-product__body" onClick={(event) => event.stopPropagation()}>
         <PopupCloseButton onClick={() => closeProductPopup()} />
         <img
-          src={productInPopup.image}
+          src={process.env.PUBLIC_URL + productInPopup.image}
           alt={productInPopup.title}
           className="popup-product__image"
         />

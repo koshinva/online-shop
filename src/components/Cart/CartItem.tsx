@@ -11,7 +11,7 @@ const CartItem: FC<{ cartItem: ICartItem }> = ({ cartItem }) => {
     <li className="cart-item">
       <div>
         <img
-          src={cartItem.product.image}
+          src={process.env.PUBLIC_URL + cartItem.product.image}
           alt={cartItem.product.title}
           className="cart-item__image"
         />

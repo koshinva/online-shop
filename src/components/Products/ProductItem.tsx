@@ -24,7 +24,11 @@ const ProductItem: FC<IProductItem> = ({ product }) => {
   return (
     <div className="product-item">
       <div className="product-item__top-level">
-        <img src={product.image} alt={product.title} className="product-item__image" />
+        <img
+          src={process.env.PUBLIC_URL + product.image}
+          alt={product.title}
+          className="product-item__image"
+        />
         <button className="product-item__button" type="button" onClick={() => handleClick()}>
           {isExistInCart ? <Icon name="BsCartDashFill" /> : <Icon name="BsCartPlus" />}
         </button>
