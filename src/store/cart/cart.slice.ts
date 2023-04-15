@@ -36,14 +36,14 @@ export const cartSlice = createSlice({
     calculateTotalAmount(state) {
       state.totalAmount = state.cartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
     },
-    closePopup(state) {
+    closePopupAndClearCart(state) {
       state.isOpenedPopup = false;
-    },
+      state.cartList = [];
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(sendOrder.fulfilled, (state) => {
       state.isOpenedPopup = true;
-      state.cartList = [];
     });
   },
 });

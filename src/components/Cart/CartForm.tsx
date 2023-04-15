@@ -1,8 +1,6 @@
 import { FC, FormEvent, useState, ChangeEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useActions } from 'hooks/useActions';
 import Button from 'ui/button/Button';
-
 
 interface IFields {
   user: string;
@@ -10,8 +8,7 @@ interface IFields {
 }
 
 const CartForm: FC = () => {
-  const { sendOrder, closePopup } = useActions();
-  const navigate = useNavigate();
+  const { sendOrder } = useActions();
   const [fields, setFields] = useState<IFields>({ user: '', phone: '' });
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -19,11 +16,8 @@ const CartForm: FC = () => {
     const { user, phone } = fields;
     sendOrder({ user, phone });
     setFields({ user: '', phone: '' });
-    navigate('/');
-    setTimeout(() => {
-      closePopup();
-    }, 3000);
   };
+
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFields({ ...fields, [name]: value });

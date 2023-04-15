@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 import './Popup.css';
 import PopupCloseButton from './PopupCloseButton';
@@ -8,22 +8,14 @@ import { popupRowTitles } from 'utils/popupRowTitles';
 import PopupRow from './PopupRow';
 import Button from 'ui/button/Button';
 import { Link } from 'react-router-dom';
+import { usePopup } from './usePopup';
 
 const PopupProduct: FC = () => {
   const { productInPopup } = useTypedSelector((state) => state.products);
   const { cartList } = useTypedSelector((state) => state.cart);
   const { closeProductPopup, addProductInCart, removeProductFromCart } = useActions();
 
-  useEffect(() => {
-    if (productInPopup) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = '17px';
-    }
-    return () => {
-      document.body.style.overflow = 'scroll';
-      document.body.style.paddingRight = '0';
-    };
-  }, [productInPopup]);
+  usePopup(!!productInPopup);
 
   if (!productInPopup) return null;
 
