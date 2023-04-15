@@ -32,7 +32,7 @@ export const productsSlice = createSlice({
       }
     },
     filterProductsByBrands(state) {
-      state.products = state.products.filter((product) =>
+      state.products = products.filter((product) =>
         state.checkedIdBrands.includes(product.brand)
       );
     },
@@ -40,6 +40,9 @@ export const productsSlice = createSlice({
       state.checkedIdBrands = [];
       state.brands = getBrands();
       state.products = products;
+    },
+    checkMoreButtonActivity(state) {
+      state.moreButtonActivity = state.productsPerPage < state.products.length;
     },
     increaseProductsPerPage(state) {
       state.productsPerPage += 3;

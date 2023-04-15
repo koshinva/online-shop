@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './Products.css';
 import { useTypedSelector } from 'hooks/useTypedSelector';
@@ -10,7 +10,12 @@ const Products: FC = () => {
   const { products, productsPerPage, moreButtonActivity } = useTypedSelector(
     (state) => state.products
   );
-  const { increaseProductsPerPage } = useActions();
+  const { increaseProductsPerPage, checkMoreButtonActivity } = useActions();
+
+    useEffect(() => {
+      checkMoreButtonActivity();
+    }, [checkMoreButtonActivity, products]);
+
   return (
     <div className="products">
       <ul className="products__list">
